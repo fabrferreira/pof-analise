@@ -1,3 +1,16 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
 # Insegurança alimentar na região Nordeste
 
 Este repositório contém um conjunto de rotinas em R destinadas à importação, manipulação e extração de análises dos microdados da POF para a região Nordeste do Brasil. Num primeiro momento, desenvolvem-se diversas estatísticas descritivas da amostra para a região em questão e, após isto, desenvolve-se um modelo de regressão logística baseada em algumas variáveis, buscando-se identificar os determinantes da insegurança alimentar na região.

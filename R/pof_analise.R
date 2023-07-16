@@ -282,17 +282,16 @@ pof_nordeste <- pof_nordeste |>
 # Estimação econométrica --------------------------------------------------
 
 mod_logit <- survey::svyglm(
-  formula = ins_alim ~ renda_familiar_total + homem + negro + homem * raca +
+  formula = ins_alim ~ renda_familiar_total + homem + sexo * raca +
     anos_instrucao + idade + tipo_zona + composicao,
   family = binomial(link = "logit"),
   design = pof_nordeste
   )
 
-
 # Análise -----------------------------------------------------------------
 
 gtsummary::tbl_regression(mod_logit, exponentiate = TRUE)
 
-jtools::summ(mod_logit, exp = TRUE)
+
 
 
